@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cozy Mystery Road Trip</title>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream:      #f5f0e1;
+      --dark-green: #3d5a4c;
+      --mid-green:  #7a9e87;
+      --terracotta: #d4735a;
+      --slate:      #8fa8a8;
+      --text:       #2e2e2e;
+      --divider:    #c9bfa0;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--cream);
+      color: var(--text);
+      font-family: 'Alegreya', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    .banner {
+      width: 100%;
+      display: block;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    .welcome {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .welcome h1 {
+      font-family: 'Marker Felt', 'Chalkboard SE', 'Comic Sans MS', cursive;
+      color: var(--dark-green);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      letter-spacing: 0.01em;
+    }
+
+    .welcome p {
+      font-size: 1.15rem;
+      color: var(--text);
+      max-width: 640px;
+      margin: 0 auto 0.9rem;
+    }
+
+    .welcome p em {
+      font-style: italic;
+      color: var(--dark-green);
+    }
+
+    .hashtag {
+      display: inline-block;
+      background: var(--terracotta);
+      color: #fff;
+      font-family: 'Marker Felt', 'Chalkboard SE', cursive;
+      font-size: 1rem;
+      padding: 0.3rem 0.9rem;
+      border-radius: 2rem;
+      margin-top: 0.4rem;
+      letter-spacing: 0.03em;
+    }
+
+    .divider {
+      border: none;
+      border-top: 2px solid var(--divider);
+      margin: 2.5rem 0;
+    }
+
+    .itinerary-heading {
+      font-family: 'Marker Felt', 'Chalkboard SE', cursive;
+      color: var(--dark-green);
+      font-size: 1.7rem;
+      text-align: center;
+      margin-bottom: 1.8rem;
+    }
+
+    .state-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 0.6rem 1.2rem;
+    }
+
+    .state-list li {
+      border-left: 3px solid var(--mid-green);
+      padding-left: 0.75rem;
+    }
+
+    .state-list a {
+      color: var(--dark-green);
+      text-decoration: none;
+      font-size: 1.05rem;
+      font-weight: 700;
+      transition: color 0.15s;
+    }
+
+    .state-list a:hover {
+      color: var(--terracotta);
+      text-decoration: underline;
+    }
+
+    .state-list .week-label {
+      font-size: 0.82rem;
+      color: var(--slate);
+      display: block;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--slate);
+      font-size: 0.9rem;
+      padding: 2rem 1rem;
+      border-top: 1px solid var(--divider);
+    }
+  </style>
+</head>
+<body>
+
+  <img class="banner" src="banner.png" alt="Cozy Mystery Road Trip" />
+
+  <div class="container">
+
+    <div class="welcome">
+      <h1>Welcome to the Cozy Mystery Road Trip!</h1>
+      <p>Grab your favorite blanket and a hot cup of something delicious — we're traveling the United States, one book at a time. We've mapped out a suggested itinerary below, state by state, but feel free to chart your own course, whether you're reading solo or alongside a group of friends.</p>
+      <p><em>Each week we'll pull into a new state, with a featured book to guide the way and a handful of other local reads to explore if you want to linger a little longer.</em></p>
+      <p>However you travel, we'd love to see your stops along the way — share them with <span class="hashtag">#CozyMysteryRoadTrip</span></p>
+    </div>
+
+    <hr class="divider" />
+
+    <h2 class="itinerary-heading">🗺️ Itinerary</h2>
+
+    <ul class="state-list">
+      <li><span class="week-label">Week 1</span><a href="washington.html">Washington</a></li>
+      <li><span class="week-label">Week 2</span><a href="oregon.html">Oregon</a></li>
+      <li><span class="week-label">Week 3</span><a href="california.html">California</a></li>
+      <li><span class="week-label">Week 4</span><a href="nevada.html">Nevada</a></li>
+      <li><span class="week-label">Week 5</span><a href="idaho.html">Idaho</a></li>
+      <li><span class="week-label">Week 6</span><a href="utah.html">Utah</a></li>
+      <li><span class="week-label">Week 7</span><a href="arizona.html">Arizona</a></li>
+      <li><span class="week-label">Week 8</span><a href="new-mexico.html">New Mexico</a></li>
+      <li><span class="week-label">Week 9</span><a href="colorado.html">Colorado</a></li>
+      <li><span class="week-label">Week 10</span><a href="wyoming.html">Wyoming</a></li>
+      <li><span class="week-label">Week 11</span><a href="montana.html">Montana</a></li>
+      <li><span class="week-label">Week 12</span><a href="north-dakota.html">North Dakota</a></li>
+      <li><span class="week-label">Week 13</span><a href="south-dakota.html">South Dakota</a></li>
+      <li><span class="week-label">Week 14</span><a href="nebraska.html">Nebraska</a></li>
+      <li><span class="week-label">Week 15</span><a href="kansas.html">Kansas</a></li>
+      <li><span class="week-label">Week 16</span><a href="oklahoma.html">Oklahoma</a></li>
+      <li><span class="week-label">Week 17</span><a href="texas.html">Texas</a></li>
+      <li><span class="week-label">Week 18</span><a href="louisiana.html">Louisiana</a></li>
+      <li><span class="week-label">Week 19</span><a href="arkansas.html">Arkansas</a></li>
+      <li><span class="week-label">Week 20</span><a href="missouri.html">Missouri</a></li>
+      <li><span class="week-label">Week 21</span><a href="iowa.html">Iowa</a></li>
+      <li><span class="week-label">Week 22</span><a href="minnesota.html">Minnesota</a></li>
+      <li><span class="week-label">Week 23</span><a href="wisconsin.html">Wisconsin</a></li>
+      <li><span class="week-label">Week 24</span><a href="illinois.html">Illinois</a></li>
+      <li><span class="week-label">Week 25</span><a href="indiana.html">Indiana</a></li>
+      <li><span class="week-label">Week 26</span><a href="michigan.html">Michigan</a></li>
+      <li><span class="week-label">Week 27</span><a href="ohio.html">Ohio</a></li>
+      <li><span class="week-label">Week 28</span><a href="kentucky.html">Kentucky</a></li>
+      <li><span class="week-label">Week 29</span><a href="tennessee.html">Tennessee</a></li>
+      <li><span class="week-label">Week 30</span><a href="mississippi.html">Mississippi</a></li>
+      <li><span class="week-label">Week 31</span><a href="alabama.html">Alabama</a></li>
+      <li><span class="week-label">Week 32</span><a href="florida.html">Florida</a></li>
+      <li><span class="week-label">Week 33</span><a href="georgia.html">Georgia</a></li>
+      <li><span class="week-label">Week 34</span><a href="south-carolina.html">South Carolina</a></li>
+      <li><span class="week-label">Week 35</span><a href="north-carolina.html">North Carolina</a></li>
+      <li><span class="week-label">Week 36</span><a href="virginia.html">Virginia</a></li>
+      <li><span class="week-label">Week 37</span><a href="west-virginia.html">West Virginia</a></li>
+      <li><span class="week-label">Week 38</span><a href="dc.html">Washington D.C.</a></li>
+      <li><span class="week-label">Week 39</span><a href="maryland.html">Maryland</a></li>
+      <li><span class="week-label">Week 40</span><a href="delaware.html">Delaware</a></li>
+      <li><span class="week-label">Week 41</span><a href="pennsylvania.html">Pennsylvania</a></li>
+      <li><span class="week-label">Week 42</span><a href="new-jersey.html">New Jersey</a></li>
+      <li><span class="week-label">Week 43</span><a href="new-york.html">New York</a></li>
+      <li><span class="week-label">Week 44</span><a href="connecticut.html">Connecticut</a></li>
+      <li><span class="week-label">Week 45</span><a href="rhode-island.html">Rhode Island</a></li>
+      <li><span class="week-label">Week 46</span><a href="massachusetts.html">Massachusetts</a></li>
+      <li><span class="week-label">Week 47</span><a href="vermont.html">Vermont</a></li>
+      <li><span class="week-label">Week 48</span><a href="new-hampshire.html">New Hampshire</a></li>
+      <li><span class="week-label">Week 49</span><a href="maine.html">Maine</a></li>
+      <li><span class="week-label">Week 50</span><a href="alaska.html">Alaska</a></li>
+      <li><span class="week-label">Week 51</span><a href="hawaii.html">Hawaii</a></li>
+    </ul>
+
+  </div>
+
+  <footer>
+    <p>Cozy Mystery Road Trip &nbsp;·&nbsp; <span class="hashtag">#CozyMysteryRoadTrip</span></p>
+  </footer>
+
+</body>
+</html>
