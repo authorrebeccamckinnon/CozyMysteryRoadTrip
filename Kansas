@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Week 15 — Kansas · Cozy Mystery Road Trip</title>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Palette ── */
+    :root {
+      --cream:      #f5f0e1;
+      --dark-green: #3d5a4c;
+      --mid-green:  #7a9e87;
+      --terracotta: #d4735a;
+      --slate:      #8fa8a8;
+      --text:       #2e2e2e;
+      --divider:    #c9bfa0;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--cream);
+      color: var(--text);
+      font-family: 'Alegreya', Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    /* ── Nav ── */
+    .top-nav {
+      background: var(--dark-green);
+      padding: 0.6rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .top-nav a {
+      color: var(--cream);
+      text-decoration: none;
+      font-family: 'Marker Felt', 'Chalkboard SE', cursive;
+      font-size: 1rem;
+      opacity: 0.85;
+      transition: opacity 0.15s;
+    }
+
+    .top-nav a:hover { opacity: 1; text-decoration: underline; }
+
+    .top-nav .sep { color: var(--mid-green); }
+
+    /* ── State graphic ── */
+    .state-header {
+      width: 100%;
+      max-height: 320px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+      padding: 1rem 0 0;
+    }
+
+    /* ── Main content ── */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    /* ── Section labels ── */
+    .section-label {
+      font-family: 'Marker Felt', 'Chalkboard SE', cursive;
+      color: var(--dark-green);
+      font-size: 1.5rem;
+      margin-bottom: 1.2rem;
+    }
+
+    /* ── Featured book ── */
+    .featured-book {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+
+    .book-cover {
+      flex-shrink: 0;
+      width: 130px;
+    }
+
+    .book-cover img {
+      width: 100%;
+      border-radius: 4px;
+      box-shadow: 3px 4px 10px rgba(0,0,0,0.18);
+      display: block;
+    }
+
+    /* Placeholder shown when no cover image is available yet */
+    .cover-placeholder {
+      width: 130px;
+      height: 190px;
+      background: var(--mid-green);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 0.8rem;
+      text-align: center;
+      padding: 0.5rem;
+      font-style: italic;
+      box-shadow: 3px 4px 10px rgba(0,0,0,0.18);
+    }
+
+    .book-details {
+      flex: 1;
+    }
+
+    .book-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--dark-green);
+      line-height: 1.3;
+      margin-bottom: 0.3rem;
+    }
+
+    .book-series {
+      font-style: italic;
+      color: var(--slate);
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .book-author {
+      font-size: 1.05rem;
+      margin-bottom: 0.8rem;
+      color: var(--text);
+    }
+
+    .buy-link {
+      display: inline-block;
+      background: var(--terracotta);
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Marker Felt', 'Chalkboard SE', cursive;
+      font-size: 0.95rem;
+      padding: 0.35rem 1rem;
+      border-radius: 2rem;
+      transition: background 0.15s;
+    }
+
+    .buy-link:hover { background: var(--dark-green); }
+
+    /* ── Divider ── */
+    .divider {
+      border: none;
+      border-top: 2px solid var(--divider);
+      margin: 2rem 0;
+    }
+
+    /* ── Also set in list ── */
+    .also-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .also-list li {
+      border-left: 3px solid var(--mid-green);
+      padding-left: 0.85rem;
+    }
+
+    .also-title {
+      font-weight: 700;
+      color: var(--dark-green);
+      font-size: 1.05rem;
+    }
+
+    .also-series {
+      font-style: italic;
+      color: var(--slate);
+      font-size: 0.95rem;
+    }
+
+    .also-author {
+      font-size: 0.98rem;
+      color: var(--text);
+    }
+
+    .also-link {
+      color: var(--terracotta);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .also-link:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      color: var(--slate);
+      font-size: 0.9rem;
+      padding: 2rem 1rem;
+      border-top: 1px solid var(--divider);
+    }
+
+    footer a {
+      color: var(--mid-green);
+      text-decoration: none;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    /* ── Responsive ── */
+    @media (max-width: 520px) {
+      .featured-book { flex-direction: column; }
+      .book-cover, .cover-placeholder { width: 100%; max-width: 160px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="top-nav">
+    <a href="index.html">← Back to Itinerary</a>
+    <span class="sep">·</span>
+    <a href="#">Week 2 — Oregon →</a>
+  </nav>
+
+  <!-- Replace src with your Washington state graphic filename -->
+  <img class="state-header" src="washington.png" alt="Washington" />
+
+  <div class="container">
+
+    <!-- ══ FEATURED BOOK ══ -->
+    <h2 class="section-label">Featured Book</h2>
+
+    <div class="featured-book">
+
+      <div class="book-cover">
+        <!-- When you have a cover image, replace the placeholder div below with:
+             <img src="covers/book-filename.jpg" alt="Book Title cover" />
+        -->
+        <div class="cover-placeholder">Cover coming soon</div>
+      </div>
+
+      <div class="book-details">
+        <div class="book-title">Title of Featured Book</div>
+        <div class="book-series">Series Name, Book #</div>
+        <div class="book-author">by Author Name</div>
+        <a class="buy-link" href="YOUR-LINK-HERE" target="_blank" rel="noopener">Find it here →</a>
+      </div>
+
+    </div>
+
+    <hr class="divider" />
+
+    <!-- ══ ALSO SET IN THIS STATE ══ -->
+    <h2 class="section-label">Also Set in Washington</h2>
+
+    <ul class="also-list">
+
+      <!-- Books sorted by author last name, then series within that author.
+           Duplicate each <li> block for each additional book. -->
+
+      <li>
+        <div class="also-title">Book Title</div>
+        <div class="also-series">Series Name, Book #</div>
+        <div class="also-author">by Author Name &nbsp;·&nbsp; <a class="also-link" href="YOUR-LINK-HERE" target="_blank" rel="noopener">Find it here →</a></div>
+      </li>
+
+      <li>
+        <div class="also-title">Book Title</div>
+        <div class="also-series">Series Name, Book #</div>
+        <div class="also-author">by Author Name &nbsp;·&nbsp; <a class="also-link" href="YOUR-LINK-HERE" target="_blank" rel="noopener">Find it here →</a></div>
+      </li>
+
+      <li>
+        <div class="also-title">Book Title</div>
+        <div class="also-series">Series Name, Book #</div>
+        <div class="also-author">by Author Name &nbsp;·&nbsp; <a class="also-link" href="YOUR-LINK-HERE" target="_blank" rel="noopener">Find it here →</a></div>
+      </li>
+
+    </ul>
+
+  </div>
+
+  <footer>
+    <p><a href="index.html">← Back to the full itinerary</a> &nbsp;·&nbsp; #CozyMysteryRoadTrip</p>
+  </footer>
+
+</body>
+</html>
